@@ -29,5 +29,6 @@ module.exports = {
     "set_modulus":0x4b,
     "request_key_exchange":0x4c,
     "poll_with_ack":0x56,
-    "event_ack":0x57
+    "event_ack":0x57,
+    "get_counters":0x58
   };
