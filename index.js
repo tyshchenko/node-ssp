@@ -308,6 +308,9 @@ var SSPInstance = Class.extend({
                 case 0xC9: //nv11
                   event = ["device_full"];
                   break;
+                case 0x7:
+                  event = ['channel_value', buffer];
+                  break;
                   //Reject reasons
                 case 0x0:
                 case 0x1:
@@ -316,7 +319,6 @@ var SSPInstance = Class.extend({
                 case 0x4:
                 case 0x5:
                 case 0x6:
-                case 0x7:
                 case 0x8:
                 case 0x9:
                 case 0xa:
