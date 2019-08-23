@@ -35,6 +35,5 @@ module.exports = {
     "enable_payout":0x5c,
     "payout":0x46,
     "set_route":0x3b,
-    "set_route1":0x3b
 
   };
