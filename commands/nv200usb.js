@@ -34,6 +34,6 @@ module.exports = {
     "get_all_levels":0x22,
     "enable_payout":0x5c,
     "payout":0x46,
-    "set_route":0x3b
+    "set_route":0x3b0f
 
   };
