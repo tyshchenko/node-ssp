@@ -6,7 +6,7 @@ module.exports = {
     "display_on":0x03,
     "display_off":0x04,
     "setup_request":0x05,
-    "host_protocol_version":0x06,
+    "host_protocol_version":0x0608,
     "poll":0x07,
     "reject_banknote":0x08,
     "disable":0x09,
@@ -31,5 +31,13 @@ module.exports = {
     "poll_with_ack":0x56,
     "event_ack":0x57,
     "get_counters":0x58,
-    "get_all_levels":0x22
+    "get_all_levels":0x22,
+    "enable_payout":0x5c,
+    "payout1":0x4604,
+    "payout2":0x4602,
+    "payout3":0x4603,
+    "payout4":0x3304,
+    "set_route":0x3b,
+    "set_route1":0x3b04
+
   };
