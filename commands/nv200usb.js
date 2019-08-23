@@ -30,5 +30,6 @@ module.exports = {
     "request_key_exchange":0x4c,
     "poll_with_ack":0x56,
     "event_ack":0x57,
-    "get_counters":0x58
+    "get_counters":0x58,
+    "get_all_levels":0x22
   };
