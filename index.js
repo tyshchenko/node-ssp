@@ -309,7 +309,7 @@ var SSPInstance = Class.extend({
                   event = ["device_full"];
                   break;
                 case 0x7:
-                  event = ['channel_value', buffer];
+                  event = ['channel_value', data];
                   break;
                   //Reject reasons
                 case 0x0:
@@ -340,7 +340,7 @@ var SSPInstance = Class.extend({
                 case 0x1a:
                 case 0x1b:
                 case 0x1c:
-                  event = ["note_rejected", data[1]];
+                  event = ["note_rejected", data];
                   break;
               }
               event && self.emit.apply(self, event);
