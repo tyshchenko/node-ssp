@@ -35,6 +35,7 @@ module.exports = {
     "enable_payout":0x5c,
     "payout":0x46,
     "set_route":0x3b,
+    "dispense":0x33,
     "dispense100":0x33640000005a415258,
     "dispense200":0x33c80000005a415258
 
