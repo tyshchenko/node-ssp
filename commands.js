@@ -71,7 +71,8 @@ var Commands = Class.extend({
           var attrib = [0x64,0x00,0x00,0x00,0x5a,0x41,0x52,0x58];
           commandLine = [this.getSequence(), attrib.length + 1, command].concat(attrib);
       } else if (commandName == "dispense200") {
-          var attrib = [0x20,0x4e,0x00,0x00,0x5a,0x41,0x52,0x58];
+          //var attrib = [0x20,0x4e,0x00,0x00,0x5a,0x41,0x52,0x58];
+          var attrib = [0x20,0x4e,0x00,0x00];
           commandLine = [this.getSequence(), attrib.length + 1, command].concat(attrib);
       } else {
         commandLine = [this.getSequence(), args.length + 1, command].concat(args);
