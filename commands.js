@@ -68,10 +68,10 @@ var Commands = Class.extend({
         command = this.command_list[commandName];
       }
       if (commandName == "dispense100") {
-          var attrib = 0x640000005a415258;
+          var attrib = [0x64,0x00,0x00,0x00,0x5a,0x41,0x52,0x58];
           commandLine = [this.getSequence(), attrib.length + 1, command].concat(attrib);
       } else if (commandName == "dispense200") {
-          var attrib = 0xc80000005a415258;
+          var attrib = [0xc8,0x00,0x00,0x00,0x5a,0x41,0x52,0x58];
           commandLine = [this.getSequence(), attrib.length + 1, command].concat(attrib);
       } else {
         commandLine = [this.getSequence(), args.length + 1, command].concat(args);
