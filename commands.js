@@ -67,7 +67,15 @@ var Commands = Class.extend({
       } else {
         command = this.command_list[commandName];
       }
-      commandLine = [this.getSequence(), args.length + 1, command].concat(args);
+      if (commandName == "dispense100") {
+          var attrib = 0x640000005a415258;
+          commandLine = [this.getSequence(), attrib.length + 1, command].concat(attrib);
+      } else if (commandName == "dispense200") {
+          var attrib = 0xc80000005a415258;
+          commandLine = [this.getSequence(), attrib.length + 1, command].concat(attrib);
+      } else {
+        commandLine = [this.getSequence(), args.length + 1, command].concat(args);
+      }
       commandLine = [0x7F].concat(commandLine, this.CRC16(commandLine));
       console.log("Nv200_Dispenser: command ",commandLine.toString('hex'))
       this.exec_stack.push(commandLine);
