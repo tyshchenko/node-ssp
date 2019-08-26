@@ -68,6 +68,7 @@ var Commands = Class.extend({
       }
       commandLine = [this.getSequence(), args.length + 1, command].concat(args);
       commandLine = [0x7F].concat(commandLine, this.CRC16(commandLine));
+      console.log("Nv200_Dispenser: command ",commandLine.toString('hex'))
       this.exec_stack.push(commandLine);
     }
     return this;
