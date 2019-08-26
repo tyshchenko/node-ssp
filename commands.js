@@ -52,6 +52,7 @@ var Commands = Class.extend({
     var command,
       commandLine,
       args = Array.prototype.slice.call(arguments, 1);
+      console.log("Nv200_Dispenser: agrs ",args.toString('hex'))
     if (!this.command_list.hasOwnProperty(commandName)) {
       throw new Error("Unknown command '" + commandName + "'");
     }
