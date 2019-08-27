@@ -52,7 +52,7 @@ var Commands = Class.extend({
     var command,
       commandLine,
       args = Array.prototype.slice.call(arguments, 1);
-      console.log("Nv200_Dispenser: agrs ",args.toString('hex'))
+      //console.log("Nv200_Dispenser: agrs ",args.toString('hex'))
     if (!this.command_list.hasOwnProperty(commandName)) {
       throw new Error("Unknown command '" + commandName + "'");
     }
@@ -67,18 +67,9 @@ var Commands = Class.extend({
       } else {
         command = this.command_list[commandName];
       }
-      if (commandName == "dispense100") {
-          var attrib = [0x64,0x00,0x00,0x00,0x5a,0x41,0x52,0x58];
-          commandLine = [this.getSequence(), attrib.length + 1, command].concat(attrib);
-      } else if (commandName == "dispense200") {
-          //var attrib = [0x20,0x4e,0x00,0x00,0x5a,0x41,0x52,0x58];
-          var attrib = [0x20,0x4e,0x00,0x00];
-          commandLine = [this.getSequence(), attrib.length + 1, command].concat(attrib);
-      } else {
-        commandLine = [this.getSequence(), args.length + 1, command].concat(args);
-      }
+      commandLine = [this.getSequence(), args.length + 1, command].concat(args);
       commandLine = [0x7F].concat(commandLine, this.CRC16(commandLine));
-      console.log("Nv200_Dispenser: command ",commandLine.toString('hex'))
+      //console.log("Nv200_Dispenser: command ",commandLine.toString('hex'))
       this.exec_stack.push(commandLine);
     }
     return this;
